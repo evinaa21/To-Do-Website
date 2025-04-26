@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sakura">
+  <!-- Default theme -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ PixelTask Pro - Aesthetic To-Do</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Animate.css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+    <!-- Your custom styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Toast Container -->
+    <div
+      class="toast-container position-fixed bottom-0 end-0 p-3"
+      style="z-index: 1100"
+    >
+      <!-- Ensure high z-index -->
+      <!-- Toasts will be appended here -->
+    </div>
+
+    <header class="navbar navbar-expand-lg py-3 shadow-sm glass sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">✨ PixelTask Pro</a>
+        <nav class="ms-auto d-flex align-items-center gap-3 flex-wrap">
+          <a href="index.html" class="nav-link active" aria-current="page"
+            >Tasks</a
+          >
+          <a href="pomodoro.html" class="nav-link">Pomodoro</a>
+          <a href="habits.html" class="nav-link">Habits</a>
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="settings.html" class="nav-link">Settings</a>
+          <!-- Theme Dropdown -->
+          <div class="dropdown">
+            <button
+              id="themeDropdownToggle"
+              class="btn btn-icon dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Select theme"
+              title="Change Theme"
+            >
+              <i class="fa-solid fa-palette"></i>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-end glass"
+              aria-labelledby="themeDropdownToggle"
+              id="themeDropdownMenu"
+            >
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-theme-value="sakura"
+                >
+                  <i class="fa-solid fa-fan me-2"></i> Sakura Dream
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-theme-value="ocean"
+                >
+                  <i class="fa-solid fa-water me-2"></i> Ocean Serenity
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-theme-value="forest"
+                >
+                  <i class="fa-solid fa-tree me-2"></i> Forest Whisper
+                </button>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-theme-value="dark-forest"
+                >
+                  <i class="fa-solid fa-moon me-2"></i> Dark Forest
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-theme-value="sunset-glow"
+                >
+                  <i class="fa-solid fa-sun me-2"></i> Sunset Glow
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-theme-value="minimal-mono"
+                >
+                  <i class="fa-solid fa-circle-half-stroke me-2"></i> Minimal
+                  Mono
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- End Theme Dropdown -->
+        </nav>
+      </div>
+    </header>
+
+    <main class="container py-4 py-lg-5">
+      <!-- Adjusted padding -->
+
+      <!-- Control Panel Section -->
+      <section
+        class="control-panel glass p-3 p-md-4 mb-4 rounded shadow-sm animate__animated animate__fadeIn"
+        aria-labelledby="controlPanelHeading"
+      >
+        <h2 id="controlPanelHeading" class="visually-hidden">Task Controls</h2>
+
+        <!-- Progress Bar -->
+        <div class="mb-4" aria-label="Task completion progress">
+          <div class="progress-label d-flex justify-content-between small mb-1">
+            <span>Progress</span>
+            <span id="progressPercentage">0%</span>
+          </div>
+          <div class="progress" style="height: 8px">
+            <div
+              id="progressBar"
+              class="progress-bar"
+              role="progressbar"
+              style="width: 0%"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Add Task Form -->
+        <form id="taskForm" class="mb-4" aria-labelledby="addTaskHeading">
+          <h3 id="addTaskHeading" class="visually-hidden">Add New Task</h3>
+          <div class="input-group mb-2">
+            <span class="input-group-text"
+              ><i class="fa-solid fa-pencil fa-fw"></i
+            ></span>
+            <input
+              id="taskInput"
+              type="text"
+              class="form-control"
+              placeholder="Add new task description..."
+              required
+              aria-label="New task description"
+            />
+          </div>
+          <div class="row g-2">
+            <div class="col-sm">
+              <div class="input-group input-group-sm">
+                <!-- Smaller inputs -->
+                <label for="categoryInput" class="input-group-text"
+                  ><i class="fa-solid fa-tag fa-fw"></i
+                ></label>
+                <select
+                  id="categoryInput"
+                  class="form-select"
+                  aria-label="Task category"
+                >
+                  <option value="Personal" selected>Personal</option>
+                  <option value="Work">Work</option>
+                  <option value="Study">Study</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="input-group input-group-sm">
+                <!-- Smaller inputs -->
+                <label for="dueDateInput" class="input-group-text"
+                  ><i class="fa-solid fa-calendar-days fa-fw"></i
+                ></label>
+                <input
+                  id="dueDateInput"
+                  type="datetime-local"
+                  class="form-control"
+                  aria-label="Task due date and time"
+                />
+              </div>
+            </div>
+            <div class="col-sm-auto">
+              <button type="submit" class="btn btn-primary btn-sm w-100">
+                <!-- Smaller button -->
+                <i class="fa-solid fa-plus me-1"></i> Add
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Search and Filter Controls -->
+        <div
+          class="d-flex flex-wrap gap-2"
+          role="toolbar"
+          aria-label="Task filtering controls"
+        >
+          <div class="input-group input-group-sm flex-grow-1">
+            <!-- Smaller inputs -->
+            <label for="searchInput" class="input-group-text"
+              ><i class="fa-solid fa-magnifying-glass fa-fw"></i
+            ></label>
+            <input
+              id="searchInput"
+              type="search"
+              class="form-control"
+              placeholder="Search tasks..."
+              aria-label="Search tasks by description"
+            />
+          </div>
+          <div
+            class="btn-group btn-group-sm"
+            role="group"
+            aria-label="Filter by category"
+          >
+            <!-- Smaller buttons -->
+            <button
+              type="button"
+              class="btn btn-outline-secondary filter-btn active"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary filter-btn"
+              data-filter="Personal"
+            >
+              <i class="fas fa-user me-1"></i>Personal
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary filter-btn"
+              data-filter="Work"
+            >
+              <i class="fas fa-briefcase me-1"></i>Work
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary filter-btn"
+              data-filter="Study"
+            >
+              <i class="fas fa-book me-1"></i>Study
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary filter-btn"
+              data-filter="Other"
+            >
+              Other
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- End Control Panel -->
+
+      <!-- Stats Section -->
+      <section
+        class="stats-container anime-stats glass p-3 p-md-4 mb-4 rounded"
+        aria-labelledby="statsHeading"
+      >
+        <h2 id="statsHeading" class="visually-hidden">Task Statistics</h2>
+        <div class="row g-3 align-items-center">
+          <!-- Reduced gap -->
+          <div class="col-md-4">
+            <div class="stat-card text-center">
+              <!-- Removed extra padding -->
+              <div class="stat-icon mb-1">
+                <i class="fas fa-tasks fa-fw"></i>
+              </div>
+              <h4 class="stat-number" id="totalTasks">0</h4>
+              <p class="stat-label">Total Tasks</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-card text-center">
+              <div class="stat-icon mb-1">
+                <i class="fas fa-check-circle fa-fw"></i>
+              </div>
+              <h4 class="stat-number" id="completedTasks">0</h4>
+              <p class="stat-label">Completed</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-card text-center">
+              <div class="stat-icon mb-1">
+                <i class="fas fa-chart-line fa-fw"></i>
+              </div>
+              <h4 class="stat-number" id="productivityScore">0%</h4>
+              <p class="stat-label">Productivity</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Stats Section -->
+
+      <!-- Task Board Section -->
+      <section aria-labelledby="taskBoardHeading">
+        <h2 id="taskBoardHeading" class="visually-hidden">Tasks</h2>
+        <!-- Task Board - Single List Layout -->
+        <div id="taskBoard" aria-live="polite">
+          <!-- Task cards will be rendered here directly by JavaScript -->
+          <!-- Example structure generated by JS: -->
+          <!-- <div class="task-card glass mb-3 animate__animated animate__fadeInUp">...</div> -->
+        </div>
+
+        <p
+          id="noTasksMessage"
+          class="text-center text-muted mt-5 display-6"
+          style="display: none"
+        >
+          No tasks here! ✨
+        </p>
+      </section>
+      <!-- End Task Board Section -->
+    </main>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SortableJS (Optional - if you want drag-reorder within the single list) -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script> -->
+    <!-- Your custom script -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

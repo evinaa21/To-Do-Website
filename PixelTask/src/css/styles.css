@@ -1,0 +1,792 @@
+:root {
+  /* --- Sakura Dream Theme (Refined) --- */
+  --theme-sakura-primary: #ffb3c1; /* Slightly softer pink */
+  --theme-sakura-accent: #ffc2d1; /* Lighter accent */
+  --theme-sakura-bg-start: #fff0f5; /* Lavender Blush */
+  --theme-sakura-bg-end: #ffe4e9; /* Softer Misty Rose */
+  --theme-sakura-glass-bg: rgba(255, 240, 245, 0.65); /* Slightly more opaque */
+  --theme-sakura-glass-border: rgba(255, 179, 198, 0.5);
+  --theme-sakura-text: #6d4b6b; /* Slightly darker purple */
+  --theme-sakura-text-muted: #a08a9d;
+  --theme-sakura-shadow: rgba(109, 75, 107, 0.12); /* Slightly more shadow */
+  --theme-sakura-success: #a8e6cf;
+  --theme-sakura-danger: #ffaaa5;
+  --theme-sakura-info: #dcedc1;
+  --theme-sakura-warning: #ffd3b6;
+  --theme-sakura-progress-bg: rgba(109, 75, 107, 0.1);
+  --theme-sakura-input-bg: rgba(255, 255, 255, 0.3);
+  --theme-sakura-input-bg-focus: rgba(255, 255, 255, 0.5);
+  --theme-sakura-input-border: rgba(255, 179, 198, 0.4);
+  --theme-sakura-input-group-bg: rgba(255, 240, 245, 0.4);
+
+  /* --- Ocean Serenity Theme (Refined) --- */
+  --theme-ocean-primary: #a0ced9;
+  --theme-ocean-accent: #99d9a6; /* Slightly adjusted green */
+  --theme-ocean-bg-start: #e0f7fa;
+  --theme-ocean-bg-end: #ccebf0; /* Slightly bluer end */
+  --theme-ocean-glass-bg: rgba(224, 247, 250, 0.7); /* More opaque */
+  --theme-ocean-glass-border: rgba(160, 206, 217, 0.55);
+  --theme-ocean-text: #3b5f8a; /* Deeper blue */
+  --theme-ocean-text-muted: #7a9ab3;
+  --theme-ocean-shadow: rgba(59, 95, 138, 0.12);
+  --theme-ocean-success: #cff0cc;
+  --theme-ocean-danger: #ffc0cb;
+  --theme-ocean-info: #b3e0ff;
+  --theme-ocean-warning: #ffe5b4;
+  --theme-ocean-progress-bg: rgba(59, 95, 138, 0.1);
+  --theme-ocean-input-bg: rgba(255, 255, 255, 0.4);
+  --theme-ocean-input-bg-focus: rgba(255, 255, 255, 0.6);
+  --theme-ocean-input-border: rgba(160, 206, 217, 0.5);
+  --theme-ocean-input-group-bg: rgba(224, 247, 250, 0.5);
+
+  /* --- Forest Whisper Theme (Refined) --- */
+  --theme-forest-primary: #b2d8b2; /* Softer green */
+  --theme-forest-accent: #f0cfa8; /* Softer beige */
+  --theme-forest-bg-start: #f5fff5; /* Lighter Honeydew */
+  --theme-forest-bg-end: #e6f5e6;
+  --theme-forest-glass-bg: rgba(240, 255, 240, 0.7); /* More opaque */
+  --theme-forest-glass-border: rgba(178, 216, 178, 0.5);
+  --theme-forest-text: #4f6a3f; /* Slightly softer olive */
+  --theme-forest-text-muted: #8fbc8f;
+  --theme-forest-shadow: rgba(79, 106, 63, 0.12);
+  --theme-forest-success: #d8f8d8;
+  --theme-forest-danger: #ffdab9;
+  --theme-forest-info: #e0eee0;
+  --theme-forest-warning: #fffacd;
+  --theme-forest-progress-bg: rgba(79, 106, 63, 0.1);
+  --theme-forest-input-bg: rgba(255, 255, 255, 0.4);
+  --theme-forest-input-bg-focus: rgba(255, 255, 255, 0.6);
+  --theme-forest-input-border: rgba(178, 216, 178, 0.5);
+  --theme-forest-input-group-bg: rgba(240, 255, 240, 0.5);
+
+  /* --- NEW: Dark Forest Theme --- */
+  --theme-dark-forest-primary: #77ab59; /* Moss Green */
+  --theme-dark-forest-accent: #c9df8a; /* Lighter Fern */
+  --theme-dark-forest-bg-start: #2c3e50; /* Midnight Blue */
+  --theme-dark-forest-bg-end: #1e2b37; /* Darker Slate */
+  --theme-dark-forest-glass-bg: rgba(
+    44,
+    62,
+    80,
+    0.6
+  ); /* Dark semi-transparent */
+  --theme-dark-forest-glass-border: rgba(119, 171, 89, 0.4); /* Moss border */
+  --theme-dark-forest-text: #e0e0e0; /* Light Gray Text */
+  --theme-dark-forest-text-muted: #a0a0a0; /* Medium Gray */
+  --theme-dark-forest-shadow: rgba(0, 0, 0, 0.25); /* Darker shadow */
+  --theme-dark-forest-success: #85c785; /* Muted Green */
+  --theme-dark-forest-danger: #d98680; /* Muted Red */
+  --theme-dark-forest-info: #7fbfbf; /* Muted Teal */
+  --theme-dark-forest-warning: #e6b47c; /* Muted Orange */
+  --theme-dark-forest-progress-bg: rgba(224, 224, 224, 0.1);
+  --theme-dark-forest-input-bg: rgba(255, 255, 255, 0.1);
+  --theme-dark-forest-input-bg-focus: rgba(255, 255, 255, 0.15);
+  --theme-dark-forest-input-border: rgba(119, 171, 89, 0.3);
+  --theme-dark-forest-input-group-bg: rgba(44, 62, 80, 0.4);
+
+  /* --- NEW: Sunset Glow Theme --- */
+  --theme-sunset-primary: #ff8c61; /* Coral Orange */
+  --theme-sunset-accent: #ffb284; /* Peach */
+  --theme-sunset-bg-start: #4c3a5f; /* Deep Purple */
+  --theme-sunset-bg-end: #8e5a6e; /* Mauve */
+  --theme-sunset-glass-bg: rgba(100, 70, 90, 0.6); /* Purplish glass */
+  --theme-sunset-glass-border: rgba(255, 140, 97, 0.4); /* Coral border */
+  --theme-sunset-text: #fadde1; /* Pale Pink Text */
+  --theme-sunset-text-muted: #d1b3c4; /* Muted Lavender */
+  --theme-sunset-shadow: rgba(76, 58, 95, 0.2); /* Purple shadow */
+  --theme-sunset-success: #a8d8b9; /* Soft Mint */
+  --theme-sunset-danger: #ff9a8b; /* Soft Red */
+  --theme-sunset-info: #f3d6a3; /* Soft Gold */
+  --theme-sunset-warning: #ffb284; /* Peach (same as accent) */
+  --theme-sunset-progress-bg: rgba(250, 222, 225, 0.1);
+  --theme-sunset-input-bg: rgba(255, 255, 255, 0.1);
+  --theme-sunset-input-bg-focus: rgba(255, 255, 255, 0.15);
+  --theme-sunset-input-border: rgba(255, 140, 97, 0.3);
+  --theme-sunset-input-group-bg: rgba(100, 70, 90, 0.4);
+
+  /* --- NEW: Minimal Mono Theme --- */
+  --theme-minimal-primary: #555555; /* Medium Gray */
+  --theme-minimal-accent: #888888; /* Lighter Gray */
+  --theme-minimal-bg-start: #f8f9fa; /* Very Light Gray */
+  --theme-minimal-bg-end: #e9ecef; /* Light Gray */
+  --theme-minimal-glass-bg: rgba(248, 249, 250, 0.7); /* Light glass */
+  --theme-minimal-glass-border: rgba(85, 85, 85, 0.3); /* Gray border */
+  --theme-minimal-text: #212529; /* Near Black */
+  --theme-minimal-text-muted: #6c757d; /* Standard Muted Gray */
+  --theme-minimal-shadow: rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  --theme-minimal-success: #6a994e; /* Muted Green */
+  --theme-minimal-danger: #bc4749; /* Muted Red */
+  --theme-minimal-info: #52796f; /* Muted Teal */
+  --theme-minimal-warning: #fca311; /* Muted Orange */
+  --theme-minimal-progress-bg: rgba(33, 37, 41, 0.1);
+  --theme-minimal-input-bg: rgba(255, 255, 255, 0.5);
+  --theme-minimal-input-bg-focus: rgba(255, 255, 255, 0.7);
+  --theme-minimal-input-border: rgba(85, 85, 85, 0.25);
+  --theme-minimal-input-group-bg: rgba(233, 236, 239, 0.5);
+
+  /* Transitions & Animations */
+  --transition-speed: 0.3s;
+  --transition-speed-fast: 0.15s;
+  --border-radius-base: 0.75rem; /* Centralize border radius */
+  --border-radius-small: 0.5rem;
+  --border-radius-lg: 1rem; /* Larger radius for sections */
+
+  /* Assign initial theme variables (Default to Sakura) */
+  --primary-color: var(--theme-sakura-primary);
+  --accent-color: var(--theme-sakura-accent);
+  --success-color: var(--theme-sakura-success);
+  --danger-color: var(--theme-sakura-danger);
+  --info-color: var(--theme-sakura-info);
+  --warning-color: var(--theme-sakura-warning);
+  --bg-start: var(--theme-sakura-bg-start);
+  --bg-end: var(--theme-sakura-bg-end);
+  --glass-bg: var(--theme-sakura-glass-bg);
+  --glass-border: var(--theme-sakura-glass-border);
+  --text-color: var(--theme-sakura-text);
+  --text-muted: var(--theme-sakura-text-muted);
+  --card-shadow: var(--theme-sakura-shadow);
+  --progress-bg: var(--theme-sakura-progress-bg);
+  --input-bg: var(--theme-sakura-input-bg);
+  --input-bg-focus: var(--theme-sakura-input-bg-focus);
+  --input-border: var(--theme-sakura-input-border);
+  --input-group-bg: var(--theme-sakura-input-group-bg);
+}
+
+/* Apply Ocean Serenity Theme */
+[data-theme="ocean"] {
+  --primary-color: var(--theme-ocean-primary);
+  --accent-color: var(--theme-ocean-accent);
+  --success-color: var(--theme-ocean-success);
+  --danger-color: var(--theme-ocean-danger);
+  --info-color: var(--theme-ocean-info);
+  --warning-color: var(--theme-ocean-warning);
+  --bg-start: var(--theme-ocean-bg-start);
+  --bg-end: var(--theme-ocean-bg-end);
+  --glass-bg: var(--theme-ocean-glass-bg);
+  --glass-border: var(--theme-ocean-glass-border);
+  --text-color: var(--theme-ocean-text);
+  --text-muted: var(--theme-ocean-text-muted);
+  --card-shadow: var(--theme-ocean-shadow);
+  --progress-bg: var(--theme-ocean-progress-bg);
+  --input-bg: var(--theme-ocean-input-bg);
+  --input-bg-focus: var(--theme-ocean-input-bg-focus);
+  --input-border: var(--theme-ocean-input-border);
+  --input-group-bg: var(--theme-ocean-input-group-bg);
+}
+
+/* Apply Forest Whisper Theme */
+[data-theme="forest"] {
+  --primary-color: var(--theme-forest-primary);
+  --accent-color: var(--theme-forest-accent);
+  --success-color: var(--theme-forest-success);
+  --danger-color: var(--theme-forest-danger);
+  --info-color: var(--theme-forest-info);
+  --warning-color: var(--theme-forest-warning);
+  --bg-start: var(--theme-forest-bg-start);
+  --bg-end: var(--theme-forest-bg-end);
+  --glass-bg: var(--theme-forest-glass-bg);
+  --glass-border: var(--theme-forest-glass-border);
+  --text-color: var(--theme-forest-text);
+  --text-muted: var(--theme-forest-text-muted);
+  --card-shadow: var(--theme-forest-shadow);
+  --progress-bg: var(--theme-forest-progress-bg);
+  --input-bg: var(--theme-forest-input-bg);
+  --input-bg-focus: var(--theme-forest-input-bg-focus);
+  --input-border: var(--theme-forest-input-border);
+  --input-group-bg: var(--theme-forest-input-group-bg);
+}
+
+/* --- Apply NEW Dark Forest Theme --- */
+[data-theme="dark-forest"] {
+  --primary-color: var(--theme-dark-forest-primary);
+  --accent-color: var(--theme-dark-forest-accent);
+  --success-color: var(--theme-dark-forest-success);
+  --danger-color: var(--theme-dark-forest-danger);
+  --info-color: var(--theme-dark-forest-info);
+  --warning-color: var(--theme-dark-forest-warning);
+  --bg-start: var(--theme-dark-forest-bg-start);
+  --bg-end: var(--theme-dark-forest-bg-end);
+  --glass-bg: var(--theme-dark-forest-glass-bg);
+  --glass-border: var(--theme-dark-forest-glass-border);
+  --text-color: var(--theme-dark-forest-text);
+  --text-muted: var(--theme-dark-forest-text-muted);
+  --card-shadow: var(--theme-dark-forest-shadow);
+  --progress-bg: var(--theme-dark-forest-progress-bg);
+  --input-bg: var(--theme-dark-forest-input-bg);
+  --input-bg-focus: var(--theme-dark-forest-input-bg-focus);
+  --input-border: var(--theme-dark-forest-input-border);
+  --input-group-bg: var(--theme-dark-forest-input-group-bg);
+}
+
+/* --- Apply NEW Sunset Glow Theme --- */
+[data-theme="sunset-glow"] {
+  --primary-color: var(--theme-sunset-primary);
+  --accent-color: var(--theme-sunset-accent);
+  --success-color: var(--theme-sunset-success);
+  --danger-color: var(--theme-sunset-danger);
+  --info-color: var(--theme-sunset-info);
+  --warning-color: var(--theme-sunset-warning);
+  --bg-start: var(--theme-sunset-bg-start);
+  --bg-end: var(--theme-sunset-bg-end);
+  --glass-bg: var(--theme-sunset-glass-bg);
+  --glass-border: var(--theme-sunset-glass-border);
+  --text-color: var(--theme-sunset-text);
+  --text-muted: var(--theme-sunset-text-muted);
+  --card-shadow: var(--theme-sunset-shadow);
+  --progress-bg: var(--theme-sunset-progress-bg);
+  --input-bg: var(--theme-sunset-input-bg);
+  --input-bg-focus: var(--theme-sunset-input-bg-focus);
+  --input-border: var(--theme-sunset-input-border);
+  --input-group-bg: var(--theme-sunset-input-group-bg);
+}
+
+/* --- Apply NEW Minimal Mono Theme --- */
+[data-theme="minimal-mono"] {
+  --primary-color: var(--theme-minimal-primary);
+  --accent-color: var(--theme-minimal-accent);
+  --success-color: var(--theme-minimal-success);
+  --danger-color: var(--theme-minimal-danger);
+  --info-color: var(--theme-minimal-info);
+  --warning-color: var(--theme-minimal-warning);
+  --bg-start: var(--theme-minimal-bg-start);
+  --bg-end: var(--theme-minimal-bg-end);
+  --glass-bg: var(--theme-minimal-glass-bg);
+  --glass-border: var(--theme-minimal-glass-border);
+  --text-color: var(--theme-minimal-text);
+  --text-muted: var(--theme-minimal-text-muted);
+  --card-shadow: var(--theme-minimal-shadow);
+  --progress-bg: var(--theme-minimal-progress-bg);
+  --input-bg: var(--theme-minimal-input-bg);
+  --input-bg-focus: var(--theme-minimal-input-bg-focus);
+  --input-border: var(--theme-minimal-input-border);
+  --input-group-bg: var(--theme-minimal-input-group-bg);
+}
+
+/* --- Add Keyframes for Subtle Background Animation --- */
+@keyframes subtleGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --- Apply Animation to Body --- */
+body {
+  font-family: "Poppins", sans-serif;
+  /* Use a simple static gradient */
+  background: linear-gradient(-60deg, var(--bg-start), var(--bg-end));
+  /* Make background larger to allow shifting */
+  background-size: 400% 400%;
+  color: var(--text-color);
+  /* Apply the animation */
+  animation: subtleGradientShift 30s ease infinite; /* Adjust time as needed */
+  transition: background var(--transition-speed) ease-in-out,
+    color var(--transition-speed) ease-in-out;
+  min-height: 100vh;
+  padding-top: 100px; /* Adjust if header height changes */
+  line-height: 1.7;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header & Theme Dropdown */
+.sticky-top {
+  padding-top: 1rem; /* More padding */
+  padding-bottom: 1rem;
+  transition: background var(--transition-speed) ease-in-out,
+    box-shadow var(--transition-speed) ease-in-out,
+    border-color var(--transition-speed) ease-in-out; /* Added border-color */
+  /* Ensure glass effect applies */
+  background: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px); /* Increased blur on header */
+  -webkit-backdrop-filter: blur(18px);
+}
+.navbar-brand {
+  font-weight: 700 !important; /* Bolder brand */
+  font-size: 1.5rem; /* Larger brand */
+}
+#themeDropdownToggle {
+  /* Style the dropdown toggle like the old button */
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+  background-color: transparent;
+  color: var(--text-color);
+  transition: background-color var(--transition-speed-fast),
+    border-color var(--transition-speed-fast), transform var(--transition-speed),
+    color var(--transition-speed-fast);
+}
+#themeDropdownToggle:hover {
+  transform: scale(1.1);
+  background-color: rgba(var(--text-color), 0.1);
+}
+#themeDropdownToggle i {
+  font-size: 1.2rem;
+  transition: transform var(--transition-speed) ease-in-out;
+}
+.dropdown-menu {
+  /* Style the dropdown menu itself */
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--glass-border);
+  background-color: var(--glass-bg); /* Use glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.5rem 0;
+  box-shadow: 0 5px 15px var(--card-shadow);
+  transition: background-color var(--transition-speed),
+    border-color var(--transition-speed);
+}
+.dropdown-item {
+  color: var(--text-color);
+  padding: 0.5rem 1.2rem; /* Adjust padding */
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+.dropdown-item i {
+  /* Style icons in dropdown */
+  opacity: 0.7;
+  margin-right: 0.6rem; /* Space between icon and text */
+  width: 1.1em; /* Align text */
+  text-align: center;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: color-mix(in srgb, var(--primary-color) 15%, transparent);
+  color: var(--text-color); /* Keep text color consistent on hover */
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--primary-color);
+  /* Determine text color based on theme's primary button text color */
+  color: var(--theme-sakura-text); /* Default, override per theme below */
+}
+[data-theme="ocean"] .dropdown-item.active,
+[data-theme="ocean"] .dropdown-item:active {
+  color: var(--theme-ocean-text);
+}
+[data-theme="forest"] .dropdown-item.active,
+[data-theme="forest"] .dropdown-item:active {
+  color: var(--theme-forest-text);
+}
+[data-theme="dark-forest"] .dropdown-item.active,
+[data-theme="dark-forest"] .dropdown-item:active {
+  color: #fff;
+} /* Example for dark theme */
+[data-theme="sunset-glow"] .dropdown-item.active,
+[data-theme="sunset-glow"] .dropdown-item:active {
+  color: #fff;
+} /* Example for sunset */
+[data-theme="minimal-mono"] .dropdown-item.active,
+[data-theme="minimal-mono"] .dropdown-item:active {
+  color: #fff;
+} /* Example for minimal */
+
+.dropdown-divider {
+  border-top: 1px solid var(--glass-border);
+  transition: border-color var(--transition-speed);
+}
+
+/* --- Standardize Focus Styles --- */
+/* Apply to common focusable elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: none; /* Remove default browser focus shadow if outline is used */
+}
+/* Special handling for form controls to avoid double borders */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color) !important;
+  /* Keep the subtle glow but remove the default outline */
+  box-shadow: 0 0 0 0.25rem
+    color-mix(in srgb, var(--primary-color) 30%, transparent) !important;
+  outline: none !important; /* Prevent double focus indicator */
+}
+/* Ensure dropdown items also get a clear focus */
+.dropdown-item:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: -2px; /* Inset outline slightly */
+  box-shadow: none;
+  background-color: color-mix(
+    in srgb,
+    var(--primary-color) 15%,
+    transparent
+  ); /* Keep hover style */
+}
+
+/* --- Glassmorphism Refined --- */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px); /* Slightly stronger blur */
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: var(--border-radius-lg); /* Use larger radius for sections */
+  box-shadow: 0 8px 32px 0 var(--card-shadow); /* Softer, larger shadow */
+  transition: background var(--transition-speed) ease-in-out,
+    border-color var(--transition-speed) ease-in-out,
+    box-shadow var(--transition-speed) ease-in-out;
+}
+
+/* --- Control Panel --- */
+.control-panel {
+  /* Uses .glass styles */
+  /* Add specific overrides if needed */
+}
+
+/* Progress Bar Enhancements */
+.progress-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.progress {
+  background-color: var(--progress-bg); /* Use theme variable */
+  border-radius: var(--border-radius-sm); /* Match height */
+}
+.progress-bar {
+  background-color: var(--primary-color); /* Use theme primary */
+  transition: width 0.6s ease;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Form Input Styling */
+.form-control,
+.form-select {
+  background-color: var(--input-bg); /* Use theme variable */
+  color: var(--text-color);
+  border: 1px solid var(--input-border); /* Use theme variable */
+  transition: border-color var(--transition-speed-fast),
+    box-shadow var(--transition-speed-fast),
+    background-color var(--transition-speed-fast); /* Added background transition */
+}
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+.input-group-text {
+  background-color: var(--input-group-bg); /* Use theme variable */
+  border: 1px solid var(--input-border);
+  color: var(--text-muted);
+  transition: border-color var(--transition-speed-fast),
+    background-color var(--transition-speed-fast); /* Added transitions */
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem
+    color-mix(in srgb, var(--primary-color) 25%, transparent);
+  background-color: var(--input-bg-focus); /* Use theme variable */
+}
+
+/* Filter Buttons */
+.filter-btn {
+  transition: background-color var(--transition-speed-fast),
+    color var(--transition-speed-fast),
+    border-color var(--transition-speed-fast);
+}
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: var(
+    --bs-white
+  ); /* Ensure contrast - might need adjustment for light themes */
+  border-color: var(--primary-color);
+}
+/* Adjust active button text color for light themes if needed */
+[data-theme="sakura"] .filter-btn.active,
+[data-theme="ocean"] .filter-btn.active,
+[data-theme="forest"] .filter-btn.active,
+[data-theme="minimal-mono"] .filter-btn.active {
+  color: var(
+    --theme-sakura-text
+  ); /* Example: Use a dark text for light themes */
+}
+[data-theme="minimal-mono"] .filter-btn.active {
+  color: #fff; /* Keep white for minimal mono */
+}
+
+.filter-btn:not(.active):hover {
+  background-color: color-mix(in srgb, var(--primary-color) 15%, transparent);
+  border-color: color-mix(in srgb, var(--primary-color) 50%, transparent);
+  color: var(--text-color); /* Ensure text color remains readable on hover */
+}
+
+/* --- HUD/Tech Anime-Inspired Stats Section --- */
+.anime-stats {
+  border-radius: var(--border-radius-lg); /* Match other sections */
+  padding: 1rem 1.5rem; /* Adjust padding */
+  position: relative; /* Needed for pseudo-elements */
+  overflow: hidden; /* Contain pseudo-elements */
+}
+.anime-stats .stat-card {
+  background: transparent; /* Make card background transparent */
+  border: none; /* Remove card border */
+  box-shadow: none; /* Remove card box-shadow */
+  position: relative; /* Needed for pseudo-elements */
+  padding: 1rem 0.5rem; /* Adjust padding */
+  text-align: center;
+  overflow: hidden; /* Contain pseudo-elements */
+  transition: transform 0.3s ease;
+}
+
+/* Corner Brackets using Pseudo-elements */
+.anime-stats .stat-card::before,
+.anime-stats .stat-card::after {
+  content: "";
+  position: absolute;
+  width: 20px; /* Size of the bracket lines */
+  height: 20px;
+  border-color: var(--primary-color); /* Use theme primary color */
+  border-style: solid;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+.anime-stats .stat-card::before {
+  top: 10px;
+  left: 10px;
+  border-width: 2px 0 0 2px; /* Top and Left borders */
+}
+.anime-stats .stat-card::after {
+  bottom: 10px;
+  right: 10px;
+  border-width: 0 2px 2px 0; /* Bottom and Right borders */
+}
+.anime-stats .stat-card:hover::before {
+  top: 5px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+}
+.anime-stats .stat-card:hover::after {
+  bottom: 5px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+}
+
+.anime-stats .stat-icon {
+  font-size: 2.2rem; /* Slightly smaller icon */
+  color: var(--primary-color); /* Solid theme color */
+  /* Subtle Glow Effect */
+  text-shadow: 0 0 8px color-mix(in srgb, var(--primary-color) 50%, transparent);
+  margin-bottom: 0.5rem !important;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+.anime-stats .stat-card:hover .stat-icon {
+  transform: scale(1.1);
+  color: var(--accent-color); /* Change to accent color on hover */
+  text-shadow: 0 0 12px color-mix(in srgb, var(--accent-color) 60%, transparent);
+}
+
+.anime-stats .stat-number {
+  font-size: 2.2rem; /* Larger number */
+  font-weight: 700;
+  color: var(--text-color); /* Use main text color */
+  margin-bottom: 0.25rem;
+  transition: color var(--transition-speed);
+  /* Optional: Add slight text shadow for depth */
+  /* text-shadow: 1px 1px 2px rgba(0,0,0,0.1); */
+}
+.anime-stats .stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px; /* More spacing for HUD feel */
+  transition: color var(--transition-speed);
+}
+
+/* Remove the old hover effect lift/shadow from the card itself */
+.anime-stats .stat-card:hover {
+  transform: none; /* Disable previous transform */
+  box-shadow: none; /* Disable previous shadow */
+  border-color: transparent; /* Ensure no border appears */
+}
+/* --- End HUD Stats Section --- */
+
+/* --- Task Card Styling (Single List) --- */
+#taskBoard {
+  /* Optional: Add max-width and center if needed for very wide screens */
+  /* max-width: 800px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+
+.task-card {
+  /* Uses .glass styles but override radius and padding */
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px); /* Slightly less blur than sections */
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(
+    --border-radius-base
+  ); /* Slightly smaller radius than sections */
+  box-shadow: 0 5px 15px var(--card-shadow); /* Base shadow */
+  padding: 0.8rem 1rem; /* Adjust padding */
+  margin-bottom: 1rem !important; /* Ensure spacing */
+  border-left: 4px solid transparent; /* Indicator */
+  transition: transform var(--transition-speed-fast),
+    box-shadow var(--transition-speed-fast),
+    border-left-color var(--transition-speed-fast),
+    background var(--transition-speed);
+  overflow: hidden; /* Ensure content clips */
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--card-shadow); /* Slightly adjusted hover shadow */
+  border-left-color: var(--primary-color);
+}
+
+.task-card.pinned {
+  border-left-color: var(--accent-color);
+  /* Optional: Slightly different background for pinned tasks */
+  /* background: color-mix(in srgb, var(--glass-bg) 95%, var(--accent-color) 5%); */
+}
+.task-card.pinned:hover {
+  border-left-color: color-mix(
+    in srgb,
+    var(--accent-color) 80%,
+    #000
+  ); /* Darken accent on hover */
+}
+
+.task-card.completed {
+  opacity: 0.7;
+  background: color-mix(
+    in srgb,
+    var(--glass-bg) 80%,
+    transparent
+  ); /* Slightly different bg when completed */
+  box-shadow: 0 2px 8px var(--card-shadow);
+}
+.task-card.completed:hover {
+  opacity: 0.85;
+  transform: translateY(0); /* Less lift on completed hover */
+  border-left-color: var(--success-color);
+}
+.task-card.completed .task-text-card {
+  text-decoration: line-through wavy
+    color-mix(in srgb, var(--text-muted) 80%, transparent);
+}
+
+.task-card.overdue {
+  border-left-color: var(--danger-color);
+}
+.task-card.overdue:hover {
+  border-left-color: color-mix(in srgb, var(--danger-color) 80%, #000);
+}
+
+/* Task Card Content */
+.task-text-card {
+  font-weight: 500; /* Slightly less bold */
+  margin-bottom: 0.5rem !important; /* Space below text */
+  color: var(--text-color);
+}
+.task-details-card {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.task-details-card .badge {
+  font-size: 0.75rem; /* Smaller badge */
+  font-weight: 500;
+}
+.task-due-date-card i {
+  margin-right: 0.2rem;
+}
+
+/* Task Card Actions */
+.task-actions-card {
+  opacity: 0; /* Hide actions by default */
+  transition: opacity var(--transition-speed-fast);
+  margin-top: 0.5rem; /* Add some space above actions */
+}
+.task-card:hover .task-actions-card {
+  opacity: 1; /* Show actions on card hover */
+}
+.task-actions-card .btn-icon {
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  padding: 0.2rem 0.4rem; /* Adjust button padding */
+  transition: color var(--transition-speed-fast),
+    background-color var(--transition-speed-fast); /* Add transitions */
+}
+.task-actions-card .btn-icon:hover {
+  color: var(--primary-color);
+  background-color: color-mix(
+    in srgb,
+    var(--primary-color) 10%,
+    transparent
+  ); /* Subtle hover bg */
+}
+.task-actions-card .action-delete:hover {
+  color: var(--danger-color);
+  background-color: color-mix(in srgb, var(--danger-color) 10%, transparent);
+}
+.task-actions-card .action-toggle:hover {
+  color: var(--success-color);
+  background-color: color-mix(in srgb, var(--success-color) 10%, transparent);
+}
+.task-card.completed .action-toggle:hover {
+  color: var(--warning-color); /* Different color for marking incomplete */
+  background-color: color-mix(in srgb, var(--warning-color) 10%, transparent);
+}
+.task-card.pinned .action-pin {
+  color: var(--accent-color); /* Show pin button as active */
+}
+
+/* Edit Form Styling */
+.edit-form .edit-input-group {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 0.5rem; /* Space between edit inputs */
+}
+.edit-form .edit-input-group > * {
+  flex: 1 1 auto; /* Allow inputs to grow and shrink */
+}
+.edit-form .edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* No Tasks Message */
+#noTasksMessage {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Optional: Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; /* Make track invisible */
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--primary-color) 50%, transparent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Ensure Bootstrap button focus doesn't conflict */
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important; /* Override Bootstrap's focus shadow */
+}
